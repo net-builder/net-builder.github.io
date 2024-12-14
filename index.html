@@ -4,7 +4,8 @@
 <body>
   https://net-builder.github.io/<input type="text" id="NetBuilder go to" onkeypress="Key(event)" autofocus>/ <button id="NetBuilder create" onclick="create()">Create NetBuilder page</button>
   <script>
-    if (window.location.href != "https://net-builder.github.io/"){
+    href = window.location.href
+    if (href != "https://net-builder.github.io/"){
       window.location.href = "https://net-builder.github.io/";
     }
     function Key(e){
@@ -19,7 +20,7 @@
       }
     }
     function create() {
-      if (document.getElementById("NetBuilder go to").value != "") {
+      if (document.getElementById("NetBuilder go to").value != "" and href.split("/").length == 1 and href.split("\\").length == 1) {
         window.location.href = "https://net-builder.github.io/"+document.getElementById("NetBuilder go to").value+"/?edit=1";
       }
     }
