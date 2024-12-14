@@ -20,6 +20,7 @@
       }
     }
     function create() {
+      console.log(href.split("/").length)
       if (document.getElementById("NetBuilder go to").value != "" and href.split("/").length == 1 and href.split("\\").length == 1) {
         window.location.href = "https://net-builder.github.io/"+document.getElementById("NetBuilder go to").value+"/?edit=1";
       }
