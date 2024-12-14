@@ -6,15 +6,20 @@
   <script>
     URL = window.location.href;
     document.getElementById("NetBuilder no page").innerHTML = URL;
+    function context() {
+      return false;
+    }
     if (document.addEventListener) {
       document.addEventListener('contextmenu', function(e) {
-        alert("You've tried to open context menu"); //here you draw your own menu
-        e.preventDefault();
+        if (context()) {
+          e.preventDefault();
+        }
       }, false);
     } else {
       document.attachEvent('oncontextmenu', function() {
-        alert("You've tried to open context menu");
-        window.event.returnValue = false;
+        if (context()) {
+          window.event.returnValue = false;
+        }
       });
     }
   </script>
