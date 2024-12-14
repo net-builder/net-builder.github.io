@@ -1,28 +1,31 @@
-<head>
-  <title>NetBuilder</title>
-</head>
-<body>
-  <div id="NetBuilder 404"></div>
-  <script>
-    console.clear()
-    URL = window.location.href;
-    document.getElementById("NetBuilder 404").innerHTML = URL;
-    function context() {
-      alert("This works!")
-      return false;
-    }
-    if (document.addEventListener) {
-      document.addEventListener('contextmenu', function(e) {
-        if (context()) {
-          e.preventDefault();
-        }
-      }, false);
-    } else {
-      document.attachEvent('oncontextmenu', function() {
-        if (context()) {
-          window.event.returnValue = false;
-        }
-      });
-    }
-  </script>
-</body>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>NetBuilder</title>
+  </head>
+  <body>
+    <div id="NetBuilder 404"></div>
+    <script>
+      console.clear()
+      URL = window.location.href;
+      document.getElementById("NetBuilder 404").innerHTML = URL;
+      function context() {
+        alert("This works!")
+        return false;
+      }
+      if (document.addEventListener) {
+        document.addEventListener('contextmenu', function(e) {
+          if (context()) {
+            e.preventDefault();
+          }
+        }, false);
+      } else {
+        document.attachEvent('oncontextmenu', function() {
+          if (context()) {
+            window.event.returnValue = false;
+          }
+        });
+      }
+    </script>
+  </body>
+</html>
