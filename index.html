@@ -14,7 +14,9 @@
       } else if (e.which){
         keynum = e.which;
       }
-      alert(String.fromCharCode(keynum));
+      if (keynum == 13) {
+        create()
+      }
     }
     function create() {
       window.location.href = "https://net-builder.github.io/"+document.getElementById("NetBuilder go to").value+"/?edit=1";
