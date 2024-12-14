@@ -1,29 +1,32 @@
-<head>
-  <title>NetBuilder</title>
-</head>
-<body>
-  https://net-builder.github.io/<input type="text" id="NetBuilder go to" onkeypress="Key(event)" autofocus>/ <button id="NetBuilder create" onclick="create()">Create NetBuilder page</button>
-  <script>
-    href = window.location.href
-    if (href != "https://net-builder.github.io/"){
-      window.location.href = "https://net-builder.github.io/";
-    }
-    function Key(e){
-      var keynum;
-      if (window.event) {
-        keynum = e.keyCode;
-      } else if (e.which){
-        keynum = e.which;
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>NetBuilder</title>
+  </head>
+  <body>
+    https://net-builder.github.io/<input type="text" id="NetBuilder go to" onkeypress="Key(event)" autofocus>/ <button id="NetBuilder create" onclick="create()">Create NetBuilder page</button>
+    <script>
+      href = window.location.href
+      if (href != "https://net-builder.github.io/"){
+        window.location.href = "https://net-builder.github.io/";
       }
-      if (keynum == 13) {
-        create()
+      function Key(e){
+        var keynum;
+        if (window.event) {
+          keynum = e.keyCode;
+        } else if (e.which){
+          keynum = e.which;
+        }
+        if (keynum == 13) {
+          create()
+        }
       }
-    }
-    function create() {
-      let value = document.getElementById("NetBuilder go to").value;
-      if (value != "" && value.split("/").length == 1 && value.split("\\").length == 1) {
-        window.location.href = "https://net-builder.github.io/"+value+"/#edit";
+      function create() {
+        let value = document.getElementById("NetBuilder go to").value;
+        if (value != "" && value.split("/").length == 1 && value.split("\\").length == 1) {
+          window.location.href = "https://net-builder.github.io/"+value+"/#edit";
+        }
       }
-    }
-  </script>
-</body>
+    </script>
+  </body>
+</html>
