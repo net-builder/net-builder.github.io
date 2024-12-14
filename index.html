@@ -1,5 +1,5 @@
 <head>
-  <title>V4 NetBuilder</title>
+  <title>NetBuilder</title>
 </head>
 <body>
   https://net-builder.github.io/<input type="text" id="NetBuilder go to" onkeypress="Key(event)" autofocus>/ <button id="NetBuilder create" onclick="create()">Create NetBuilder page</button>
@@ -22,7 +22,7 @@
     function create() {
       let value = document.getElementById("NetBuilder go to").value;
       if (value != "" && value.split("/").length == 1 && value.split("\\").length == 1) {
-        window.location.href = "https://net-builder.github.io/"+value+"/?edit=1";
+        window.location.href = "https://net-builder.github.io/"+value+"/#edit";
       }
     }
   </script>
