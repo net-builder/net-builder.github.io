@@ -1,5 +1,5 @@
 <head>
-  <title>NetBuilder</title>
+  <title>V1 NetBuilder</title>
 </head>
 <body>
   https://net-builder.github.io/<input type="text" id="NetBuilder go to" onkeypress="Key(event)" autofocus>/ <button id="NetBuilder create" onclick="create()">Create NetBuilder page</button>
@@ -20,8 +20,8 @@
       }
     }
     function create() {
-      console.log(href.split("/"))
-      console.log(href.split("\"))
+      console.log(href.split("/"));
+      console.log(href.split("\"));
       if (document.getElementById("NetBuilder go to").value != "" && href.split("/").length == 1 && href.split("\\").length == 1) {
         window.location.href = "https://net-builder.github.io/"+document.getElementById("NetBuilder go to").value+"/?edit=1";
       }
