@@ -8,7 +8,11 @@
     <script>
       console.clear()
       URL = window.location.href;
-      document.getElementById("NetBuilder 404").innerHTML = URL;
+      if (URL.split("/").length == 5) {
+        document.getElementById("NetBuilder 404").innerHTML = "There is no NetBuilder page here right now.\n<a href="#edit">Create one</a>"
+      } else {
+        documet.getElementById("NetBuilder 404").innerHTML = "There is no NetBuilder page here right now."
+      }
       function context() {
         alert("This works!")
         return false;
