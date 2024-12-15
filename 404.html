@@ -9,17 +9,17 @@
     <script>
       console.clear()
       URL = window.location.href;
-      if (URL.split("/")[URL.split("/").length-2] == "edit") {
+      if (window.location.hash == "#edit") {
         document.getElementById("NetBuilder 404").remove()
       } else if (URL.split("/").length == 5) {
-        document.getElementById("NetBuilder 404").innerHTML = "There is no NetBuilder page here right now.\n<a href=\""+URL+"/edit/\">Create one</a>"
-        document.getElementById("NetBuilder editor").remove()
+        document.getElementById("NetBuilder 404").innerHTML = "There is no NetBuilder page here right now.\n<button onclick=\"window.location.href = "+URL+"/#edit\">Create one</button>"
+        document.getElementById("NetBuilder editor").remove();
       } else {
-        document.getElementById("NetBuilder 404").innerHTML = "There is no NetBuilder page here right now."
-        document.getElementById("NetBuilder editor").remove()
+        document.getElementById("NetBuilder 404").innerHTML = "There is no NetBuilder page here right now.";
+        document.getElementById("NetBuilder editor").remove();
       }
       function context() {
-        alert("This works!")
+        alert("This works!");
         return false;
       }
       if (document.addEventListener) {
