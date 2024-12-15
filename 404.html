@@ -5,13 +5,18 @@
   </head>
   <body>
     <div id="NetBuilder 404"></div>
+    <div id="NetBuilder editor"></div>
     <script>
       console.clear()
       URL = window.location.href;
-      if (URL.split("/").length == 5) {
+      if (window.location.hash == "#edit") {
+        document.getElementById("NetBuilder 404").remove()
+      } else if (URL.split("/").length == 5) {
         document.getElementById("NetBuilder 404").innerHTML = "There is no NetBuilder page here right now.\n<a href=\"#edit\">Create one</a>"
+        document.getElementById("NetBuilder editor").remove()
       } else {
-        documet.getElementById("NetBuilder 404").innerHTML = "There is no NetBuilder page here right now."
+        document.getElementById("NetBuilder 404").innerHTML = "There is no NetBuilder page here right now."
+        document.getElementById("NetBuilder editor").remove()
       }
       function context() {
         alert("This works!")
