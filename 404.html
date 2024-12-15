@@ -12,7 +12,7 @@
       if (window.location.hash == "#edit") {
         document.getElementById("NetBuilder 404").remove()
       } else if (URL.split("/").length == 5) {
-        document.getElementById("NetBuilder 404").innerHTML = "There is no NetBuilder page here right now.\n<a href=\"#edit\">Create one</a>"
+        document.getElementById("NetBuilder 404").innerHTML = "There is no NetBuilder page here right now.\n<a href=\""+URL+"#edit\">Create one</a>"
         document.getElementById("NetBuilder editor").remove()
       } else {
         document.getElementById("NetBuilder 404").innerHTML = "There is no NetBuilder page here right now."
