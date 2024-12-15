@@ -12,11 +12,14 @@
       if (window.location.hash == "#edit") {
         document.getElementById("NetBuilder 404").remove();
       } else if (URL.split("/").length == 5) {
-        document.getElementById("NetBuilder 404").innerHTML = "There is no NetBuilder page here right now.<br><button onclick=\"window.location.href = "+URL+"#edit\">Create one</button>";
+        document.getElementById("NetBuilder 404").innerHTML = "There is no NetBuilder page here right now.<br><button onclick=\"edit()\">Create one</button>";
         document.getElementById("NetBuilder editor").remove();
       } else {
         document.getElementById("NetBuilder 404").innerHTML = "There is no NetBuilder page here right now.";
         document.getElementById("NetBuilder editor").remove();
+      }
+      function edit() {
+        window.location.href = URL+"#edit";
       }
       function context() {
         alert("This works!");
